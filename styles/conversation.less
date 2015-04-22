@@ -1,0 +1,37 @@
+#conversation-section {
+  color: #fff;
+  background-color: #323232;
+  padding: 60px 0;
+  h2{ color: #fff; text-align: center; }
+  .hr-short{ border-bottom-color: #fff; margin: 0 auto; }
+  .sqs-row .html-block{ width: 768px; margin: 0 auto; font-size: 18px; }
+  @media only screen and (max-width: 768px) {
+    .sqs-row .html-block{ width: 100%; padding: 0 45px; }
+  }
+  @media only screen and (max-width: 640px) {
+    h2{ text-align: left; }
+    .hr-short{ margin: 0; & + p { text-align: left; } }
+    .sqs-row .html-block{ width: 100%; padding: 0 20px; text-align: left; }
+  }
+  #fb-post-outer{
+    text-align: center;
+    #fb-post-list{
+      @media only screen and (max-width: 640px) { padding: 0 20px; .col-1-3{ padding: 0; } }
+      .fb-post-item{
+        p:first-child{ height: 200px; }
+        @media only screen and (max-width: 958px) { p:first-child{ height: 250px; } }
+        @media only screen and (max-width: 768px) { p:first-child{ height: auto; } }
+        @media only screen and (max-width: 640px) { text-align: left; font-size: 14px; }
+        .username{ 
+          text-transform: uppercase; font-size: 13px;
+          i{ background-image: url('/assets/fb.png'); width: 16px; height: 16px; background-repeat: no-repeat;
+            display: inline-block; margin-right: 16px;
+          }
+          span{ vertical-align: top; display: inline-block; line-height: 21px; }
+          @media only screen and (max-width: 640px) { margin: 15px 0 25px 0; }
+        }
+        hr{ width: 25px; @media only screen and (max-width: 640px) { margin: 0; } }
+      }
+    }
+  }
+}

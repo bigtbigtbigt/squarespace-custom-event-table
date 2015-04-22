@@ -1,0 +1,75 @@
+<div class="content page-content">
+    <div class="content-inner has-content">
+    <div class="sqs-layout sqs-grid-12 columns-12" data-type="page">
+    <div class="row sqs-row">
+    <div class="col sqs-col-12 span-12">
+    <div class="sqs-block html-block sqs-block-html" data-block-type="2">
+    <div class="sqs-block-content">
+        <h2>EVENTS</h2>
+        <table class="events-responsive-table">
+            <thead>
+                <tr>
+                    <th class="excerpt-col">Event</th>
+                    <th class="date-col">Date</th>
+                    <th class="where-col">Where</th>
+                    <th class="more-info-col"></th>
+                </tr>
+            </thead>
+            <tbody>
+            {.repeated section items}
+                <tr>
+                    <td class="excerpt-col">
+                         {excerpt}
+                    </td>
+                    <td class="date-col">
+                        <p><time datetime="{startDate|date %F}">{startDate|date %b %e}</time><br class="desktopLineBreak" />
+                        <span class="dateHyphen"> - </span>{startDate|date %l:%M %p}</p>
+                    </td>
+                    <td class="where-col">
+                        <p>{location.addressTitle}<br />
+                        <span class="city-state-zip">{location.addressLine2}</span></p>
+                    </td>
+                    <td class="more-info-col">
+                        <div class="sqs-block button-block sqs-block-button" data-block-type="53">
+                            <div class="sqs-block-content">
+                                <div class="sqs-block-button-container--left">
+                                    <a href="{fullUrl}" class="sqs-block-button-element--small sqs-block-button-element">More info</a>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+
+                    <!-- Other event stuff we don't need -->
+                    <!--
+                        {title}<br />
+                        {body}<br />
+                        {location.addressLine1}<br />
+                    -->
+                </tr>
+            {.or}
+                <!-- There are no events -->
+                <tr>
+                    <td>No events listed</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            {.end}
+            </tbody>
+        </table>
+        <div class="all-events-button">
+            <div class="sqs-block button-block sqs-block-button" data-block-type="53">
+                <div class="sqs-block-content">
+                    <div class="sqs-block-button-container--left">
+                        <a href="events" class="sqs-block-button-element--small sqs-block-button-element">View all events</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+</div>

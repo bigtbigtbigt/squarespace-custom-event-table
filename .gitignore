@@ -1,0 +1,5 @@
+sftp-config.json
+.sqs-cache
+.idea
+*.swp
+.DS_Store

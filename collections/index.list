@@ -1,0 +1,38 @@
+{.section collection}
+
+  <!-- Create index sections -->
+
+  {.repeated section collections}
+  <div id="{urlId}-section" class="index-section{.section mainImage}{.or} no-main-image{.end} {typeName}" data-url-id="{urlId}" data-collection-id="{id}"
+    {.collectionTypeNameEquals? page}data-edit-main-image="Background"{.end} {.collectionTypeNameEquals? album}data-edit-main-image="Background"{.end}
+  >
+    <div class="index-section-wrapper{.section mainImage} has-main-image{.or}{.end}">
+
+      {.collectionTypeNameEquals? page}
+        {.section mainImage}
+        <div class="index-section-image content-fill">
+          <img {@|image-meta} data-load="viewport"/>
+        </div>
+        <div class="index-image-overlay"></div>
+        {.end}
+        <div class="content page-content{.section mainImage} has-main-image tmpl-loading{.end}" id="{urlId}-page" data-url-id="{urlId}">
+          <div class="content-inner{.section mainContent} has-content{.end}">
+            {mainContent}
+          </div>
+        </div>
+      {.end}
+
+      <!-- START Custom events block -->
+
+      {# ensure that your events listing page is a section on the home page (you can drag/drop it on the SquareSpace CMS) to display the custom block}
+      {.collectionTypeNameEquals? events}
+        {@|apply index-events.block}
+      {.end}
+
+      <!-- END Custom events block -->
+
+    </div>
+  </div>
+  {.end}
+
+{.end}

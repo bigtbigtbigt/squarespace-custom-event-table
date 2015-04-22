@@ -1,0 +1,43 @@
+.index-left-padded { padding-left: 95px; padding-right: 50px; }
+.index-right-padded { padding-left: 50px; padding-right: 95px; }
+
+/** General Page Structure **/
+.index-section-wrapper .content {
+  max-width: 1200px;
+  padding: 0px;
+}
+
+[class*='col-'] { padding-right: 0px; }
+[class*=sqs-col] .sqs-block { padding-left: 0px; padding-right: 0px}
+.sqs-layout > .sqs-row { margin-left: 0px; margin-right: 0px; }
+
+#siteWrapper { line-height: 28px;}
+
+/** Buttons **/
+.small-button-style-outline .sqs-block-button .sqs-block-button-element--small{ 
+  border-width: 3px; 
+  &:hover{ background-color: #333; color: #fff; border-color: #333; }
+}
+
+/** Navigations **/
+#mainNavWrapper #mainNavigation div:first-child {display: none !important;}
+
+/** general page structures **/
+.page-content {
+  h2 { padding-bottom: 0px; margin-bottom: 20px; }
+  .hr-short { width: 60px; border-bottom: solid 3px #333;  }
+  p { margin-top: 30px; }
+}
+
+/* Carousel controls for the book section */
+.sqs-gallery-controls{
+  .next, .previous{
+    background-color: transparent;
+    height: 50px;
+    width: 50px;
+    &:hover{ background-color: transparent; }
+    &:before{ content: ''; }
+  }
+  .next{ background: url('/assets/g-controls.png') no-repeat -50px 0px; }
+  .previous{ background: url('/assets/g-controls.png') no-repeat 0 0; }
+}

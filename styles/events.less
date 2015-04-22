@@ -1,0 +1,127 @@
+#events-section {
+  /* Padding for the entire section */
+  .col:first-child > .sqs-block {
+    padding: 80px 50px 10px 95px;
+  }
+  .events-responsive-table {
+    margin-top: 51px;
+  }
+  .events-responsive-table {
+    th {
+      text-align: left;
+      text-transform: uppercase;
+      color: #333333;
+      font-family: futura-pt;
+      font-size: 17px;
+      font-style: normal;
+      font-weight: normal;
+      border-bottom: 1px solid #333333;
+      padding-bottom: 12px;
+    }
+    td {
+      border-bottom: 1px solid #dfdfdf;
+    }
+    tr:last-child td {
+      border-bottom: 1px solid #333333;
+    }
+    td {
+      padding-top: 26px;
+      padding-bottom: 5px;
+      padding-right: 30px;
+    }
+    td p {
+      margin-top: 0px;
+    }
+    .excerpt-col { width: 418px; }
+    .date-col { width: 171px; }
+    .where-col { width: 278px; }
+    .more-info-col { width: 143px; padding-right: 0px; }
+
+    /* IMPORTANT SquareSpace cannot "limit" the number of events fed into the HTML, so this CSS workaround renders only the first six (6) visible */
+    tr {
+      display: none;
+    }
+    tr:first-child, tr:nth-child(2), tr:nth-child(3), tr:nth-child(4), tr:nth-child(5), tr:nth-child(6) {
+      display: table-row;
+    }
+
+  }
+  .all-events-button {
+    padding-top: 30px;
+    padding-bottom: 120px;
+    padding-left: 0px;
+  }
+  .dateHyphen { display: none; }
+}
+
+@media only screen and (max-width: 1024px) {
+  #events-section {
+    .events-responsive-table {
+      td {
+        padding-top: 26px;
+        padding-bottom: 5px;
+        padding-right: 30px;
+      }
+      .excerpt-col { width: 240px; }
+      .date-col { width: 171px; }
+      .where-col { width: 200px; }
+      .more-info-col { width: 143px; }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #events-section {
+    .col:first-child > .sqs-block {
+      padding: 80px 20px 10px 20px;
+    }
+    .events-responsive-table {
+      margin-top: 3px;
+    }
+    .events-responsive-table {
+      thead {
+        display: none;
+      }
+      tr:first-child, tr:nth-child(2), tr:nth-child(3), tr:nth-child(4), tr:nth-child(5), tr:nth-child(6) {
+        display: block;
+      }
+      tr:first-child td, tr:nth-child(2) td, tr:nth-child(3) td, tr:nth-child(4) td, tr:nth-child(5) td, tr:nth-child(6) td {
+        display: block;
+      }
+      th {
+        border-bottom: 0px solid #333333;
+      }
+      td {
+        border-bottom: 0px solid #dfdfdf;
+      }
+      tr:last-child td {
+        border-bottom: 0px solid #333333;
+      }
+      tr td:last-child {
+        border-bottom: 1px solid #dfdfdf;
+      }
+      tr td:first-child {
+        padding-top: 20px;
+      }
+      td {
+        padding-top: 0px;
+        padding-bottom: 0px;
+        padding-right: 0px;
+      }
+      p {
+        line-height: 1.5em;
+        margin: 0px 0px 8px 0px;
+      }
+      .excerpt-col { width: 100%; }
+      .date-col { width: 100%; }
+      .where-col { width: 100%; }
+      .more-info-col { width: 100%; }
+      .desktopLineBreak { display: none; }
+      .dateHyphen { display: inline; }
+      .sqs-block {
+        padding: 6px 0px 20px 0px !important;
+      }
+    }
+  }
+}
+
