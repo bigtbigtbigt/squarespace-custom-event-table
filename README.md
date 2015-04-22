@@ -73,7 +73,7 @@ Includes CSS workaround for displaying only the first six (6) events
 
 #### Other
 
-Aside from the files included for reference in the setup step (below), any other files may be trashed
+Aside from the files included for reference in the setup step (below), any other files are not required
 
 ### Setup
 
