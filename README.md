@@ -9,7 +9,7 @@ This code lays events out as a table on desktop and a list on mobile.
 ## Features
 
 * Display as table on desktop, stacked list on mobile
-* Display city and state, without zipcode
+* Display city and state, without zip code
 * Limit of six events (this must be done via CSS, since SquareSpace's limit is broken)
 
 ### Desktop Preview
@@ -24,8 +24,7 @@ This code lays events out as a table on desktop and a list on mobile.
 
 Excerpt #1
 
-Apr 29
-6:45 PM
+Apr 29 - 6:45 PM
 
 LOCATION
 City, ST
@@ -36,8 +35,7 @@ More info
 
 Excerpt #2
 
-May 2
-7:00 PM
+May 2 - 7:00 PM
 
 LOCATION
 City, ST
@@ -48,8 +46,7 @@ More info
 
 Excerpt #3
 
-May 11
-5:15 PM
+May 11 - 5:15 PM
 
 LOCATION
 City, ST
@@ -68,13 +65,23 @@ The main HTML template
 
 #### /scripts/index-events.js
 
-This key javaScript's job is to strip the zip code from the event location
+Strips the zip code from the event location (requires jQuery)
 
 #### /styles/events.less
 
-Most of the styling in this file is custom to our execution. The important piece is the CSS workaround for displaying only the first six (6) events
+Includes CSS workaround for displaying only the first six (6) events
+
+#### Other
+
+Aside from the files included for reference in the setup step (below), any other files may be trashed
 
 ### Setup
+
+#### From SquareSpace's CMS
+
+You must create a page of events and drag/drop it into your index/Welcome page so it exists within the tree (the Pacific template works great for this)
+
+The URL Slug must be **/events**
 
 #### /template.conf
 
@@ -97,7 +104,7 @@ Use the **index.conf** in this repo or ensure that "events" is in the "acceptTyp
 
 #### /collections/index.list
 
-Use **index.list** as a guide for how to customize your own index.list file. The important code to inject is the following:
+Use the repo's included **index.list** as a guide for how to customize your own index.list file. The important code to inject is the following:
 
 ```
 {.collectionTypeNameEquals? events}
@@ -107,7 +114,7 @@ Use **index.list** as a guide for how to customize your own index.list file. The
 
 ### Local Server
 
-Use Node SquareSpace Server by kitajchuk to run SquareSpace locally
+Use Node SquareSpace Server by kitajchuk to run SquareSpace locally. Instructions may be found at
 
 https://github.com/kitajchuk/node-squarespace-server
 
@@ -117,5 +124,9 @@ https://github.com/kitajchuk/node-squarespace-server
 
 Preview the site by running the server at the command prompt (make sure you are in the same directory as template.conf)
 
-`sqs server`
+`sqs server --port=8000`
+
+Open the following URL in your web browser:
+
+`localhost:8000`
 
